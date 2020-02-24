@@ -8,7 +8,8 @@ export default class App extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            songs:[]
+            songs:[],
+            faves:[]
             //songs:songsDB.tracks.data
         };  
 
@@ -55,6 +56,32 @@ export default class App extends React.Component{
 //     });
 //    {/* <button onClick={this.getTest}>get data</button> */}
 // }
+
+
+handleFaveToggle = (e) => {
+    console.log(e);
+ const faves=Array.prototype.slice.call(this.state.faves)
+ console.log(faves);
+  const filmIndex=faves.indexOf(e);
+  console.log(filmIndex);
+  
+    
+ if(filmIndex===-1){
+     faves.push(e);
+     console.log(faves);
+    
+     
+ }else{
+     faves.splice(filmIndex,1);
+     console.log(faves);
+     
+ }
+
+ this.setState({
+          faves:faves
+        })
+
+ }
    render(){
        
         return(
@@ -66,7 +93,7 @@ export default class App extends React.Component{
          </div>
 
         <div>
-         <SongsList songs={this.state.songs}/>
+         <SongsList songs={this.state.songs} faves={this.state.faves} onfave={this.handleFaveToggle} />
          </div>
 
         </div>
