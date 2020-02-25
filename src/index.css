@@ -11,28 +11,32 @@ body,
   height: 100%;
   
 } */
+img{
+  width:120px ;
+  height: 120;
+}
 
-.side-one{
+/* .side-one{
  width: 30%;
  height: 30%;
- /* background-color: green; */
+ /* background-color: green;
  float:left;
 
-}
+} */
 
-.side-two{
+/* .side-two{
   width: 70%; 
   height: 70%; 
-  /* background-color: blue; */
+  /* background-color: blue; 
    float:right;
-   /* overflow: scroll; */
+   /* overflow: scroll; 
    overflow-y: scroll;
 
-}
+} */
 
-.song-row{
+/* .song-row{
   border: 1px black solid;
-}
+} */
 
 .heart-icon img{
   width:30px;
@@ -108,4 +112,12 @@ body,
   display: flex;
   flex-basis: 50%;
   flex-grow: 1;
+}
+.add-song{
+  border: 1px solid blueviolet;
+}
+.editMessage{
+  text-decoration: underline;
+  cursor: pointer;
+
 }
